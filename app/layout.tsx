@@ -1,14 +1,19 @@
-import { inter } from '@/app/ui/fonts';
-import '@/app/ui/global.css';
+import type { Metadata } from 'next'
+import './globals.css'
+
+export const metadata: Metadata = {
+  title: 'Sanqui Portfolio',
+  description: 'Digital Portfolio to show my projects to the world',
+}
 
 export default function RootLayout({
   children,
-}: {
-  children: React.ReactNode;
-}) {
+}: Readonly<{
+  children: React.ReactNode
+}>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased`}>{children}</body>
+      <body>{children}</body>
     </html>
-  );
+  )
 }
