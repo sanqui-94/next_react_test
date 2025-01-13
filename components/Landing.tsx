@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function Landing() {
   return (
-    <section className="min-h-[calc(100vh-4rem)] flex items-center justify-center bg-[#0D261F] text-[#a7adc6] ">
+    <section className="min-h-[calc(100vh-4rem)] flex items-center justify-center bg-[#0D261F] text-[#bdbdbd]">
       <FallingDotsBackground />
       <div className="text-center relative z-10">
         <motion.h2
@@ -15,8 +15,7 @@ export default function Landing() {
           Hello World, I am
         </motion.h2>
         <motion.h1
-          // className="text-[#53AC93] text-4xl md:text-4xl lg:text-4xl font-bold mb-3"
-          className="text-[#f1f7ff] text-7xl md:text-7xl lg:text-6xl font-bold mb-3"
+          className="text-[#f5f5f5] text-7xl md:text-7xl lg:text-6xl font-bold mb-3"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -39,7 +38,7 @@ export default function Landing() {
         >
           <a
             href="#contact"
-            className="inline-block px-8 py-3 bg-[#a7adc6] text-[#0D261F] rounded-full font-medium hover:bg-[#dde3fd] transition-colors"
+            className="inline-block px-8 py-3 bg-[#bdbdbd] text-[#0D261F] rounded-full font-medium hover:bg-[#dde3fd] transition-colors"
           >
             Contact Me
           </a>

@@ -36,12 +36,12 @@ export default function About() {
 
   return (
     <section
-      className="bg-[#eeeeee] text-[#3a6053] relative z-10 p-8 py-24 min-h-screen"
+      className="bg-[#bdbdbd] text-[#3a6053] relative z-10 py-24 min-h-screen"
       id="about"
     >
       <div className="container mx-auto">
         <motion.h2
-          className="text-3xl md:text-4xl font-bold mb-2 text-center mb-6"
+          className="text-3xl md:text-4xl font-bold text-center mb-6"
           initial={{ opacity: 0 }}
           animate={controlsTitle}
           transition={{ duration: 0.5 }}
@@ -83,7 +83,7 @@ export default function About() {
             </p>
           </motion.div>
         </div>
-        <div className="border-t border-gray-300 my-6"></div>
+        <div className="border-t border-[#194D3E] my-6"></div>
         {/* Skill set */}
         <motion.div
           className="text-center"
@@ -101,6 +101,7 @@ export default function About() {
               "React",
               "Next.js",
               "Tailwind CSS",
+              "MUI",
               "Jest",
               "Testing Library",
               "Java",
@@ -111,7 +112,7 @@ export default function About() {
             ].map((skill) => (
               <span
                 key={skill}
-                className="bg-[#f5f5f5] text-[#326758] font-bold py-2 px-4 rounded-full shadow-md hover:shadow-lg transition-shadow duration-300"
+                className="bg-[#e0e0e0] text-[#326758] font-bold py-2 px-4 rounded-full shadow-md hover:shadow-lg transition-shadow duration-300"
               >
                 {skill}
               </span>

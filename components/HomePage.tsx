@@ -2,9 +2,9 @@
 
 
 import { Navigation } from './navigation'
-import { FallingDotsBackground } from './FallingDotsBackground'
 import AboutMe from './AboutMe'
 import Landing from './Landing'
+import ContactMe from './ContactMe'
 
 export default function HomePage() {
   return (
@@ -12,6 +12,7 @@ export default function HomePage() {
       <Navigation />
       <Landing />
       <AboutMe />
+      <ContactMe />
     </main>
     
   )
