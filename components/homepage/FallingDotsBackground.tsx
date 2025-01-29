@@ -50,7 +50,7 @@ export function FallingDotsBackground() {
 
     // Animation loop
     const animate = () => {
-      ctx.fillStyle = '#0D261F'
+      ctx.fillStyle = '#15473e'
       ctx.fillRect(0, 0, canvas.width, canvas.height)
 
       dots.forEach(dot => {

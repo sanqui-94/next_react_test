@@ -36,7 +36,7 @@ export default function About() {
 
   return (
     <section
-      className="bg-[#bdbdbd] text-[#3a6053] relative z-10 py-24 min-h-screen"
+      className="bg-[#15473e] text-[#f5f5f5] relative z-10 py-24 min-h-screen"
       id="about"
     >
       <div className="container mx-auto">
@@ -83,7 +83,7 @@ export default function About() {
             </p>
           </motion.div>
         </div>
-        <div className="border-t border-[#194D3E] my-6"></div>
+        <div className="border-t border-[#606060] my-6 w-3/4 mx-auto"></div>
         {/* Skill set */}
         <motion.div
           className="text-center"
@@ -112,7 +112,7 @@ export default function About() {
             ].map((skill) => (
               <span
                 key={skill}
-                className="bg-[#e0e0e0] text-[#326758] font-bold py-2 px-4 rounded-full shadow-md hover:shadow-lg transition-shadow duration-300"
+                className="bg-[#f5f5f5] text-[#1f8378] font-bold py-2 px-4 rounded-full shadow-md hover:bg-[#FFE2DA] transition-shadow duration-300"
               >
                 {skill}
               </span>

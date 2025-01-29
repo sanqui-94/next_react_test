@@ -4,11 +4,11 @@ import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
 import { motion } from 'framer-motion'
 
-export function Navigation() {
+export default function  NavigationBar() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <nav className="py-4 bg-[#0D261F] text-[#a7adc6] relative z-20">
+    <nav className="py-4 bg-[#15473e] text-[#f5f5f5] relative z-20">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           <motion.a 
@@ -25,8 +25,8 @@ export function Navigation() {
             {['Projects'].map((item, index) => (
               <motion.a
                 key={item}
-                href={`#${item.toLowerCase()}`}
-                className="text-[#a7adc6] hover:text-[#dde3fd] transition-colors"
+                href={`/projects`}
+                className="text-[#f5f5f5] hover:text-[#FFE2DA] transition-colors"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -56,8 +56,8 @@ export function Navigation() {
               {['Projects'].map((item) => (
                 <a
                   key={item}
-                  href={`#${item.toLowerCase()}`}
-                  className="text-[#a7adc6] hover:text-[#dde3fd] transition-colors"
+                  href={`/projects`}
+                  className="text-[#f5f5f5] hover:text-[#FFE2DA] transition-colors"
                   onClick={() => setIsOpen(false)}
                 >
                   {item}
