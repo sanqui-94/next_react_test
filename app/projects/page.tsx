@@ -1,24 +1,22 @@
 import Projects from '@/components/projects/Projects';
+import { query } from '@/lib/db';
 import React from 'react';
 
-interface Project {
+export type Project = {
   id: number;
   name: string;
-  description: string;
-}
+  short_description: string;
+};
 
 async function fetchProjects() {
-  const res = await fetch('https://www.google.com/');
-  if (!res.ok) {
-    throw new Error('Failed to fetch projects');
-  }
-  return res.json();
+  const res = await query("SELECT * FROM projects");
+  return res.rows;
 }
 
 const ProjectsPage = async () => {
-  // const projects: Project[] = await fetchProjects();
+  const projects: Project[] = await fetchProjects();
 
-  return <Projects />;
+  return <Projects projects={projects}/>;
     
     // <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '16px' }}>
     //   {projects.map((project) => (

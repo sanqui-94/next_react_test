@@ -1,19 +1,24 @@
-export default function Projects() {
+"use Client";
+
+import { Project } from "@/app/projects/page";
+
+type ProjectProps = {
+  projects: Project[];
+};
+
+export default function Projects({ projects }: ProjectProps) {
   return (
     <main>
       <h1>Projects</h1>
       <p>Here are some of the projects I have worked on:</p>
       <ul>
-        <li>
-          <a href="/projects/0">Project 0</a>
-        </li>
-        <li>
-          <a href="/projects/1">Project 1</a>
-        </li>
-        <li>
-          <a href="/projects/2">Project 2</a>
-        </li>
+        {projects.map((project) => (
+          <li key={project.id}>
+            <a href={`/projects/${project.id}`}>{project.name}</a>
+            <p>{project.short_description}</p>
+          </li>
+        ))}
       </ul>
     </main>
-  )
+  );
 }
